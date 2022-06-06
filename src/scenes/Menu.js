@@ -7,12 +7,12 @@ class Menu extends Phaser.Scene {
         this.load.audio('sfx_select', './assets/blip_select12.wav');
         this.load.audio('sfx_explosion', './assets/explosion38.wav');
         this.load.audio('sfx_rocket', './assets/rocket_shot.wav');
-        this.load.image('starfield', './assets/starfield.png');
+        this.load.image('starfield', './assets/infRunbg.png');
 
       }
 
     create(){
-      this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);       
+      this.starfield = this.add.tileSprite(0, 0, 480, 640, 'starfield').setOrigin(0, 0);       
       let menuConfig = {
             fontFamily: 'Georgia',
             fontSize: '30px',
