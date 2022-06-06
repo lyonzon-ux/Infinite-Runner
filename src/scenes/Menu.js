@@ -26,8 +26,9 @@ class Menu extends Phaser.Scene {
             fixedWidth: 0
           }
 
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'CRYSTAL CITY DEFENSE', menuConfig).setOrigin(0.5);
-        this.add.text(game.config.width/2, game.config.height/2, 'Use <--> arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'GOOSE ESCAPE', menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2, 'Use <--> arrows to move', menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2, 'Avoid the bolts! They decrease your score+time', menuConfig).setOrigin(0.5);
         menuConfig.backgroundColor = '#c99ad4'
         menuConfig.color = '#000'
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press <- for Novice or -> for Expert', menuConfig).setOrigin(0.5);
@@ -39,7 +40,7 @@ class Menu extends Phaser.Scene {
           // easy mode
           game.settings = {
             spaceshipSpeed: 3,
-            gameTimer: 60000    
+            gameTimer: 40000    
           }
           this.sound.play('sfx_select');
           this.scene.start('playScene');    
@@ -48,7 +49,7 @@ class Menu extends Phaser.Scene {
           // hard mode
           game.settings = {
             spaceshipSpeed: 4,
-            gameTimer: 4500    
+            gameTimer: 30000    
           }
           this.sound.play('sfx_select');
           this.scene.start('playScene');    
