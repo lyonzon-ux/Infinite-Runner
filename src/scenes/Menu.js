@@ -15,8 +15,8 @@ class Menu extends Phaser.Scene {
       this.starfield = this.add.tileSprite(0, 0, 480, 640, 'starfield').setOrigin(0, 0);       
       let menuConfig = {
             fontFamily: 'Georgia',
-            fontSize: '30px',
-            backgroundColor: '#c3b7ee',
+            fontSize: '20px',
+            backgroundColor: '#42b281',
             color: '#0e0a1c',
             align: 'right',
             padding: {
@@ -28,10 +28,12 @@ class Menu extends Phaser.Scene {
 
         this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'GOOSE ESCAPE', menuConfig).setOrigin(0.5);
         this.add.text(game.config.width/2, game.config.height/2, 'Use <--> arrows to move', menuConfig).setOrigin(0.5);
-        this.add.text(game.config.width/2, game.config.height/2, 'Avoid the bolts! They decrease your score+time', menuConfig).setOrigin(0.5);
-        menuConfig.backgroundColor = '#c99ad4'
-        menuConfig.color = '#000'
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press <- for Novice or -> for Expert', menuConfig).setOrigin(0.5);
+
+        menuConfig.backgroundColor = '#42b249'
+        menuConfig.color = '#000'
+        this.add.text(game.config.width/2, game.config.height/1.75 + borderUISize + borderPadding, 'Avoid the bolts but collect the bread!', menuConfig).setOrigin(0.5);
+
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
         keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
     }
